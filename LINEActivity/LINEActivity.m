@@ -18,6 +18,11 @@
     BOOL _performIfLineNotInstalled;
 }
 
++ (UIActivityCategory)activityCategory
+{
+    return UIActivityCategoryShare;
+}
+
 - (id)init
 {
     if (self = [super init]) {
