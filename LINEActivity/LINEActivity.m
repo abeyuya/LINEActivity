@@ -49,7 +49,14 @@
 
 - (UIImage *)activityImage
 {
-    return [UIImage imageNamed:@"LINEActivityIcon.png"];
+    UIImage *image;
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_7_1) {
+        image = [UIImage imageNamed:@"LINEActivityIcon.png"];
+    } else {
+        image = [UIImage imageNamed:@"LINEActivityColorIcon.png"];
+    }
+
+    return image;
 }
 
 - (NSString *)activityTitle
