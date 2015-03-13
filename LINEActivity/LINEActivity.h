@@ -13,4 +13,6 @@
 
 - (id)initWithPerformIfLineNotInstalled:(BOOL)performIfLineNotInstalled;
 
++ (BOOL)isUsableLINE;
+
 @end

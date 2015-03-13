@@ -23,6 +23,10 @@
     return UIActivityCategoryShare;
 }
 
++ (BOOL)isUsableLINE {
+    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
+}
+
 - (id)init
 {
     if (self = [super init]) {
@@ -90,7 +94,7 @@
 
 - (BOOL)isUsableLINE
 {
-    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"line://"]];
+    return [[self class] isUsableLINE];
 }
 
 - (void)openLINEOnITunes
