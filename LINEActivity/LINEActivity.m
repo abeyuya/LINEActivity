@@ -87,15 +87,15 @@
 
 - (void)performActivity
 {
-    if (!!self.image) {
-        [self openLINEWithItem:self.image];
-    } else if (!!self.text && !!self.url) {
+    if (!!self.text && !!self.url) {
         NSString *textAndURL = [NSString stringWithFormat:@"%@ %@", self.text, self.url];
         [self openLINEWithItem:textAndURL];
     } else if (!!self.text) {
         [self openLINEWithItem:self.text];
     } else if (!!self.url) {
         [self openLINEWithItem:self.url];
+    } else if (!!self.image) {
+        [self openLINEWithItem:self.image];
     }
 }
 
